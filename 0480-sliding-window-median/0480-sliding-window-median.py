@@ -9,10 +9,10 @@ class Solution:
         
         kwindow.sort()
         odd = k%2
-        for i in range(k,ln):   #,n in enumerate(nums[k:],k):
+        for i in range(k,ln):
             result.append(calculateMedian(odd))
-            kwindow.pop(bisect(kwindow, nums[i-k])-1)  # <<< bisect is faster than .remove()
+            kwindow.remove(nums[i-k])#pop(bisect(kwindow, nums[i-k])-1)  # <<< bisect is faster than .remove()
             insort(kwindow, nums[i])
             
-        result.append(calculateMedian(odd))  ##(win[k/2]+win[k/2-1])/2. if not odd else win[(k-1)/2]*1.)
+        result.append(calculateMedian(odd))
         return result
