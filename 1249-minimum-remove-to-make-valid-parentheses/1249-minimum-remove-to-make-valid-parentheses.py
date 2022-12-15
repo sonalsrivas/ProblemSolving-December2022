@@ -13,7 +13,6 @@ class Solution:
                     stack.pop()
         for remainingOpens in stack:
             indexToDelete.add(remainingOpens)
-        print("indexToDelete=",indexToDelete, stack)
         result=''
         for i in range(n):
             if i in indexToDelete:
