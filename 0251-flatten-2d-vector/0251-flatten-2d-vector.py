@@ -20,7 +20,7 @@ class Vector2D:
 
     def hasNext(self) -> bool:
         self.neutralize()
-        return self.outer < len(self.vec)
+        return self.outer < self.veclength
         
 
 
