@@ -30,6 +30,5 @@ def traverse_and_find_cycle( node, nums, neighbour_list, visitor_set, n, track_s
     
     
 def normalize_index(x, array_length):
-    if x>=0:
-        return x % array_length
-    return (array_length - abs(x) % array_length)% array_length
+    return x % array_length
+    
